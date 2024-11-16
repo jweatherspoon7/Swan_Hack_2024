@@ -41,7 +41,13 @@ public class TitleScreen extends JFrame {
                 System.exit(0); // Closes the program
             }
         });
-        
+        creditsButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		new CreditScreen();
+        		TitleScreen.this.dispose();
+
+        	}
+        });
         
         
 
