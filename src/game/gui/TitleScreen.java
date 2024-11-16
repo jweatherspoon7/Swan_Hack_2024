@@ -58,11 +58,11 @@ public class TitleScreen extends JFrame {
         
 
         // Add buttons to the panel
-        buttonPanel.add(Box.createVerticalStrut(60));
+        buttonPanel.add(Box.createVerticalStrut(100));
         buttonPanel.add(startButton);
-        buttonPanel.add(Box.createVerticalStrut(60)); // Spacing
+        buttonPanel.add(Box.createVerticalStrut(100)); // Spacing
         buttonPanel.add(exitButton);
-        buttonPanel.add(Box.createVerticalStrut(60)); // Spacing
+        buttonPanel.add(Box.createVerticalStrut(100)); // Spacing
         buttonPanel.add(creditsButton);
 
         add(buttonPanel, BorderLayout.CENTER);
