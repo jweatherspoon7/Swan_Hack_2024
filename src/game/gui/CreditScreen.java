@@ -46,34 +46,34 @@ public class CreditScreen extends JFrame {
         	}
         });
 
-        c.gridx = 0;
-		 c.gridy = 1;
-		 c.ipadx = 15;
-		 c.ipady = 50;
+        c.gridx = 3;
+		 c.gridy = 0;
+		 c.ipadx = 10;
+		 c.ipady = 20;
         // adding buttons in JFrame
         add(back, c);
         
         c.gridx = 0;
-		 c.gridy = 0;
+		 c.gridy = 1;
 		 c.ipadx = 15;
-		 c.ipady = 550;
+		 c.ipady = 20;
         //adding text in JFrames
         add(text, c);
         
         
         
         c.gridx = 0;
-		 c.gridy = 2;
+		 c.gridy = 3;
 		 c.ipadx = 15;
-		 c.ipady = 50;
+		 c.ipady = 20;
         //Gojo
         add(gojo, c);
         
         
         c.gridx = 0;
-		 c.gridy = 1;
+		 c.gridy = 2;
 		 c.ipadx = 15;
-		 c.ipady = 50;
+		 c.ipady = 20;
         add(swan,c);
         
         //resize text
