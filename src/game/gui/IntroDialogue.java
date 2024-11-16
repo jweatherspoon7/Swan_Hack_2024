@@ -16,10 +16,10 @@ public class IntroDialogue extends JFrame{
 	
 	  private static int currentTextIndex = 0; // Track the current dialogue index
 	    private static final String[] dialogue = {
-	        "Welcome to Scammer Slammer! I Gojo, wil teach you the basics of this game.",
-	        "In this game, you will be presented with various possible scams",
-	        "Determine if they are scams or not by finding what's wrong with them",
-	        "Good luck, the fate of the free world counts on you!"
+	        "    Welcome to Scammer Slammer! I Gojo, wil teach you the basics of this game.",
+	        "    In this game, you will be presented with various possible scams",
+	        "    Determine if they are scams or not by finding what's wrong with them",
+	        "    Good luck, the fate of the free world counts on you!"
 	    };
 	   
     public IntroDialogue()
