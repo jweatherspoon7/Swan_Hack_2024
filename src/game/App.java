@@ -12,10 +12,7 @@ public class App
 	public static void main(String[] args) 
 	{
 		System.out.println("Hello world");
-		//TitleScreen titleScreen = new TitleScreen();
-		
-		
-		IntroDialogue dialogueScreen = new IntroDialogue();
+		TitleScreen titleScreen = new TitleScreen();
 	}
 
 }
