@@ -14,7 +14,8 @@ public class App
 		System.out.println("Hello world");
 		//TitleScreen titleScreen = new TitleScreen();
 		
-		CreditScreen creditScreen = new CreditScreen();
+		//CreditScreen creditScreen = new CreditScreen();
+		IntroDialogue dialogueScreen = new IntroDialogue();
 	}
 
 }
