@@ -23,7 +23,7 @@ public class CreditScreen extends JFrame {
 
         // x axis, y axis, width, height
         back.setBounds(150, 300, 200, 50);
-        text.setBounds(50,50,100,50);
+        text.setBounds(50,50,200,50);
 
         // Adding actions to buttons
         back.addActionListener(new ActionListener() {
@@ -36,10 +36,12 @@ public class CreditScreen extends JFrame {
 
         // adding buttons in JFrame
         add(back);
-        credit.add(text);
         
         //adding text in JFrames
+        add(text);
         
+        //resize text
+        Font font = new Font("Arial", Font.PLAIN, 24);
         
         // 400 width and 500 height
         setSize(500, 600);

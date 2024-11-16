@@ -32,6 +32,9 @@ public class TitleScreen extends JFrame
         		TitleScreen.this.dispatchEvent(new WindowEvent(TitleScreen.this, WindowEvent.WINDOW_CLOSING));
         	}
         });
+        
+        
+        
 
         // adding buttons in JFrame
         add(button);
