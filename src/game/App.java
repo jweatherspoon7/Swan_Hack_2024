@@ -4,7 +4,6 @@ package game;
 import java.io.*;
 import javax.swing.*;
 
-
 import game.gui.*;
 
 public class App 
@@ -12,7 +11,11 @@ public class App
 	
 	public static void main(String[] args) 
 	{
-		TitleScreen titleScreen = new TitleScreen();
+		System.out.println("Hello world");
+		//TitleScreen titleScreen = new TitleScreen();
+		
+		
+		IntroDialogue dialogueScreen = new IntroDialogue();
 	}
 
 }

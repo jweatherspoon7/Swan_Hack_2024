@@ -48,7 +48,13 @@ public class TitleScreen extends JFrame {
 
         	}
         });
-        
+        startButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		new IntroDialogue();
+        		TitleScreen.this.dispose();
+
+        	}
+        });
         
 
         // Add buttons to the panel
