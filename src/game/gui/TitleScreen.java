@@ -41,6 +41,9 @@ public class TitleScreen extends JFrame {
                 System.exit(0); // Closes the program
             }
         });
+        
+        
+        
 
         // Add buttons to the panel
         buttonPanel.add(Box.createVerticalStrut(60));

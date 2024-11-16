@@ -4,8 +4,8 @@ package game;
 import java.io.*;
 import javax.swing.*;
 
-import game.gui.LevelOneScreen;
-import game.gui.TitleScreen;
+
+import game.gui.*;
 
 public class App 
 {
@@ -13,6 +13,7 @@ public class App
 	public static void main(String[] args) 
 	{
 		TitleScreen titleScreen = new TitleScreen();
+
 	}
 
 }
