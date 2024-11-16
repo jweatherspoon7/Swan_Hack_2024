@@ -1,49 +1,67 @@
 package game.gui;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-
 import javax.swing.*;
 
-public class TitleScreen extends JFrame
-{
-	public TitleScreen()
-	{
-		super("Title Screen");
-		setLayout(null);
-		// Creating a new label of title
-        JLabel title = new JLabel();
-        
+public class TitleScreen extends JFrame {
+    public TitleScreen() {
+        super("Title Screen");
 
-        // Creating instance of JButton
-        JButton button = new JButton(" Start ");
-        JButton exit = new JButton(" Exit ");
-        JButton credits = new JButton(" Credits ");
+        setLayout(new BorderLayout());
 
-        // x axis, y axis, width, height
-        button.setBounds(150, 200, 200, 50);
-        exit.setBounds(150, 300, 200, 50);
-        credits.setBounds(150, 400, 200, 50);
-        
-        // Adding actions to buttons
-        exit.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        		TitleScreen.this.dispatchEvent(new WindowEvent(TitleScreen.this, WindowEvent.WINDOW_CLOSING));
-        	}
+        // Title label
+        JLabel title = new JLabel("Scammer Slammer!", SwingConstants.CENTER);
+        title.setFont(new Font("Verdana", Font.BOLD, 25));
+        add(title, BorderLayout.NORTH);
+
+        // Panel for buttons
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+
+        // Buttons
+        JButton startButton = new JButton("Start");
+        JButton exitButton = new JButton("Exit");
+        JButton creditsButton = new JButton("Credits");
+
+        // Set button sizes
+        startButton.setPreferredSize(new Dimension(200, 60));
+        exitButton.setPreferredSize(new Dimension(150, 60));
+        creditsButton.setPreferredSize(new Dimension(150, 60));
+
+        startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        creditsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // Add action listener to the exit button
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0); // Closes the program
+            }
         });
 
-        // adding buttons in JFrame
-        add(button);
-        add(exit);
-        add(credits);
+        // Add buttons to the panel
+        buttonPanel.add(Box.createVerticalStrut(60));
+        buttonPanel.add(startButton);
+        buttonPanel.add(Box.createVerticalStrut(60)); // Spacing
+        buttonPanel.add(exitButton);
+        buttonPanel.add(Box.createVerticalStrut(60)); // Spacing
+        buttonPanel.add(creditsButton);
 
-        // 400 width and 500 height
-        setSize(500, 600);
+        add(buttonPanel, BorderLayout.CENTER);
 
+        // Frame settings
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        setUndecorated(true);
 
-        // making the frame visible
         setVisible(true);
-	}
+    }
 
+    public static void main(String[] args) {
+        new TitleScreen();
+    }
 }
