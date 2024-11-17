@@ -38,6 +38,8 @@ public class App
 		}
 		
 		TitleScreen titleScreen = new TitleScreen();
+		//DialogueAfterLvlOne n = new DialogueAfterLvlOne();
+		
 	}
 
 }
