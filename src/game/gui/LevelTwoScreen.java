@@ -11,11 +11,8 @@ import java.io.IOException;
 
 public class LevelTwoScreen extends BaseLevelScreen {
     public LevelTwoScreen() {
-<<<<<<< HEAD
     	super("Level Two Screen", 2);
-=======
-    	super("Level Two Screen", defaultCloseOperation);
->>>>>>> 74a4530dc921971efb22a7fadc7c0f424478328f
+
     	Clip clip;
     	 
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
