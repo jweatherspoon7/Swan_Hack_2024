@@ -9,6 +9,8 @@ import javax.swing.*;
 
 public class LevelOneScreen extends BaseLevelScreen
 {
+	private static int levelCounter = 0;
+	
 	private final String EMAIL_SUBJECT = "THIS IS A TEST SCAM EMAIL TITLE";
 	private final String EMAIL = "scammer@iastate.edu";
 	private final String EMAIL_MESSAGE = "THIS IS A MESSAGE FOR A NEW JOB!!\n "
@@ -17,7 +19,7 @@ public class LevelOneScreen extends BaseLevelScreen
 	
 	public LevelOneScreen()
 	{
-		super("Level One");
+		super("Level One", 1);
 		setupEmail(EMAIL_SUBJECT, EMAIL, EMAIL_MESSAGE); //setup email thingy
 		
 	    //title of the level
@@ -52,53 +54,29 @@ public class LevelOneScreen extends BaseLevelScreen
 		gbc.gridheight = 2;
 		add(notScamButton, gbc);
 		
-		JCheckBox isWrongDomain = new JCheckBox("A) Sus email domain");    
-		gbc.gridx = 3;
-		gbc.gridy = 8;
-		gbc.gridheight = 2;
-		add(isWrongDomain, gbc);
-		isWrongDomain.setVisible(false);
+
+		scamReasonsDialog.add(isWrongDomain, gbc);
 		
-		JButton undoScamButton = new JButton("back");
-		gbc.gridx = 4;
-		gbc.gridy = 10;
-		gbc.gridwidth = 2;
-		gbc.gridheight = 2;
-		add(undoScamButton, gbc);
-		undoScamButton.setVisible(false);
-		
-		
-		JButton submitButton = new JButton("submit");
-		gbc.gridx = 5;
-		gbc.gridy = 10;
-		gbc.gridwidth = 2;
-		gbc.gridheight = 2;
-		add(submitButton, gbc);
-		submitButton.setVisible(false);
-		
-		
+		scamReasonsDialog.add(submitButton, gbc);
+		scamReasonsDialog.add(undoScamButton, gbc);
+
 		scamButton.addActionListener(new ActionListener() {
 			@Override
             public void actionPerformed(ActionEvent e) {
-				isWrongDomain.setVisible(true);
-				undoScamButton.setVisible(true);
-				submitButton.setVisible(true);
-				
-				notScamButton.setEnabled(false);
-				
+
+				scamReasonsDialog.setVisible(true);
+								
             }
 		});
 		
 		undoScamButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				isWrongDomain.setVisible(false);
-				undoScamButton.setVisible(false);
-				submitButton.setVisible(false);
 				
+				scamReasonsDialog.setVisible(false);
 				isWrongDomain.setSelected(false);
 				
-				notScamButton.setEnabled(true);
+				
 			}
 		});
 		
