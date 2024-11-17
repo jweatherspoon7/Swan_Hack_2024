@@ -116,6 +116,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 					//win
 					new LevelTwoScreen();
 					LevelTwoScreen.this.dispose();
+					
 				}
 				else
 				{

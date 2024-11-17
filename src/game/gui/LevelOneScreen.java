@@ -74,6 +74,7 @@ public class LevelOneScreen extends BaseLevelScreen
 			public void actionPerformed(ActionEvent e) {
 				if(isWrongDomain.isSelected() && newProblem[3].equals("true") && newProblem[4].equals("true"))
 				{
+					winSound();
 					new LevelOneScreen();
 					LevelOneScreen.this.dispose();
 				}
@@ -93,6 +94,7 @@ public class LevelOneScreen extends BaseLevelScreen
                 }
                 else
                 {
+                	winSound();
                 	new LevelOneScreen();
 					LevelOneScreen.this.dispose();
                 }
