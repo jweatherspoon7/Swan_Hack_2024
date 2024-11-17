@@ -36,6 +36,7 @@ public class App
 			emailsArr[i] = arrL.get(i).split("[|]");
 		}
 		
+
 		TitleScreen titleScreen = new TitleScreen();
 		
 	}

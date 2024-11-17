@@ -25,11 +25,13 @@ public class LevelTwoScreen extends BaseLevelScreen
 	private Clip clip;
 	
     public LevelTwoScreen() {
-    	super("Level Two Screen", 2);  
+    	super("Level Two Screen", 2);
+
     	
     	//goes to next level if all possible calls have been played
     	if(audioFilesPlayed >= audioFiles.length)
     	{
+
     		if(App.pointTracker > 7) new Win();
     		else new Lose();
     		
@@ -111,6 +113,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 		submitButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+
 				if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
 				{
 					winSound();
@@ -133,6 +136,7 @@ public class LevelTwoScreen extends BaseLevelScreen
             public void actionPerformed(ActionEvent e) {
                 if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
                 {
+
                 	winSound();
                 	//win
                 	new LevelTwoScreen();
@@ -140,6 +144,7 @@ public class LevelTwoScreen extends BaseLevelScreen
                 }
                 else
                 {
+
                 	wrong();
                 }
                 
@@ -149,6 +154,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 		
 		
 		setVisible(true);
+
     }
     
     public void wrong()
@@ -171,6 +177,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 	}
     
 }
+
  
     	
     	
