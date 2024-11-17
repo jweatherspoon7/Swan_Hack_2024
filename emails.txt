@@ -3,3 +3,14 @@ Tech Support|microsoft@scammail.com|Hello my Friend, I am from Microsoft Tech Su
 Scam Detected|McAfee@mcafee.com|Hey, it's John here from McAfee just emailing to let you know we have a great deal on McAFee. If you renew your subscriptiot today you get a 90% discount.|false|false
 Work|boss@businessgmail.com|Hey work, This is your boss from work I need those report by today have them done by the end of the day or else you're fired.|false|false
 Scam Detected|McAfee@micafee.com|Hey, it's Tim here from McAfee just emailing to let you know we have been detecting a lot of scam on your devices recently and advise you to be cautious of what you do on the internet.|true|true
+5. Account Verification|support@bankofsecure.com|Dear Customer, We noticed suspicious activity on your account and for security reasons, we need to verify your identity. Please click the link below and provide your personal information to confirm your identity. https://www.banksecureverify.com|true|true
+
+6. Job Opportunity|hiring@bigcompany.com|We are looking for an experienced professional to join our team! If you’re interested, please send your resume to this email address or fill out the form here: https://bigcompany.com/jobs. We look forward to hearing from you.|false|false
+
+7. Prize Claim|prizes@famousgiveaway.com|You've been selected as the winner of a new iPhone! All we need is a small shipping fee of $50. Provide your payment information now and we’ll send your prize right away. Don’t wait, this offer is only valid for the next 24 hours!|true|true
+
+8. Urgent Request|director@importantcompany.com|Hello, I urgently need you to transfer funds to a client on my behalf. Please send $2,500 to the following account details immediately. Time is critical, and I will reimburse you as soon as possible. Please confirm once completed. Thank you.|true|true
+
+9. Exclusive Offer|deals@topshoppingstore.com|You’ve been exclusively selected to receive a 50% discount on all items at our store! Use the code “TOP50” at checkout. Hurry, this offer ends in 24 hours! Shop now: https://www.topshoppingstore.com|false|false
+
+10. Tax Refund|IRS@taxauthority.com|Dear Taxpayer, We have processed your tax return and are offering you a refund. To receive your refund, please confirm your banking details by clicking the link below. Failure to do so will delay your refund. https://www.irsverification.com|true|true
