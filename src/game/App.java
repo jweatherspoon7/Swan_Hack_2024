@@ -13,6 +13,7 @@ public class App
 	{
 		System.out.println("Hello world");
 		TitleScreen titleScreen = new TitleScreen();
+		
 	}
 
 }
