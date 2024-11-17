@@ -1,13 +1,8 @@
-subject|email|message||[isScam - true/false|true
-
-1. In Need|scammerGetScammed@gmail.com|Hey my name is BJ and i am a prince from nigeria. I need your help to get back home safely. I will pay you back a lot of money once i get home, i promise. Please send money as quickly as possible.|true|true
-
-2. Tech Support|microsoft@scammail.com|Hello my Friend, I am from Microsoft Tech Support and i am emailing you to inform you that you are in danger of potential scams and you need to change your password. Please click this link and enter your password. https://www.scammingcite.com/|true|true
-
-3. Work|boss@businessgmail.com|Hey work, This is your boss from work I need those report by today have them done by the end of the day or else you're fired.|false|false
-
-4. Scam Detected|McAfee@email.com|Hey, it's Tim here from McAfee just emailing to let you know we have been detecting a lot of scam on your devices recently and advise you to be cautious of what you do on the internet.|false|false
-
+In Need|scammerGetScammed@gmail.com|Hey my name is BJ and i am a prince from nigeria. I need your help to get back home safely. I will pay you back a lot of money once i get home, i promise. Please send money as quickly as possible.|true|true
+Tech Support|microsoft@scammail.com|Hello my Friend, I am from Microsoft Tech Support and i am emailing you to inform you that you are in danger of potential scams and you need to change your password. Please click this link and enter your password. https://www.scammingcite.com/|true|true
+Scam Detected|McAfee@mcafee.com|Hey, it's John here from McAfee just emailing to let you know we have a great deal on McAFee. If you renew your subscriptiot today you get a 90% discount.|false|false
+Work|boss@businessgmail.com|Hey work, This is your boss from work I need those report by today have them done by the end of the day or else you're fired.|false|false
+Scam Detected|McAfee@micafee.com|Hey, it's Tim here from McAfee just emailing to let you know we have been detecting a lot of scam on your devices recently and advise you to be cautious of what you do on the internet.|true|true
 5. Account Verification|support@bankofsecure.com|Dear Customer, We noticed suspicious activity on your account and for security reasons, we need to verify your identity. Please click the link below and provide your personal information to confirm your identity. https://www.banksecureverify.com|true|true
 
 6. Job Opportunity|hiring@bigcompany.com|We are looking for an experienced professional to join our team! If you’re interested, please send your resume to this email address or fill out the form here: https://bigcompany.com/jobs. We look forward to hearing from you.|false|false
