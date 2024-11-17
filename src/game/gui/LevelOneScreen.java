@@ -18,7 +18,12 @@ public class LevelOneScreen extends BaseLevelScreen
 	{
 		super("Level One", 1);
 		
-		if(levelCounter >= App.emailsArr.length) return; //go to next level
+		if(levelCounter >= App.emailsArr.length) 
+		{
+			new LevelTwoScreen();
+			LevelOneScreen.this.dispose();
+			return;
+		}
 		
 		String[] newProblem = App.emailsArr[levelCounter];
 		levelCounter++;

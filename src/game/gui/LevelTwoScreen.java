@@ -11,15 +11,11 @@ import java.io.IOException;
 
 public class LevelTwoScreen extends BaseLevelScreen {
     public LevelTwoScreen() {
-    	super("Level Two Screen");
+    	super("Level Two Screen", 2);
     	Clip clip;
     	 
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         
-
-         
-        
-
+ 
          // Create a JButton
          JButton playButton = new JButton("Play Phone Clip");
          JButton stopButton = new JButton("Stop phone clip");
