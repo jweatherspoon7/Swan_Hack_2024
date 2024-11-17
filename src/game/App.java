@@ -5,8 +5,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.*;
-
 import game.gui.*;
 
 public class App 
@@ -39,8 +37,6 @@ public class App
 		}
 		
 		TitleScreen titleScreen = new TitleScreen();
-		Lose Lose = new Lose();
-		//DialogueAfterLvlOne n = new DialogueAfterLvlOne();
 		
 	}
 

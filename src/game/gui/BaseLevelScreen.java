@@ -76,6 +76,11 @@ public abstract class BaseLevelScreen extends JFrame
 		trustedEmailsDialog.setLayout(new GridLayout(5, -1));
 		trustedEmailsDialog.add(new JLabel("McAfee@mcafee.com"));
 		trustedEmailsDialog.add(new JLabel("boss@businessgmail.com"));
+		trustedEmailsDialog.add(new JLabel("hiring@bigcompany.com"));
+		trustedEmailsDialog.add(new JLabel("hiring@bigcompany.com"));
+		trustedEmailsDialog.add(new JLabel("deals@topshoppingstore.com"));
+		
+		//hiring@bigcompany.com deals@topshoppingstore.com
 		
 		victory.setSize(300,300);
 		victory.add(new JLabel("GJ"));

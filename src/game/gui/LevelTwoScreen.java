@@ -30,12 +30,11 @@ public class LevelTwoScreen extends BaseLevelScreen
     	//goes to next level if all possible calls have been played
     	if(audioFilesPlayed >= audioFiles.length)
     	{
-    		if(App.pointTracker > 7)
-    		{
-    			
-    		}
+    		if(App.pointTracker > 7) new Win();
+    		else new Lose();
     		
-    		return; //replace with next level
+    		this.dispose();
+    		return;
     	}
     	
          // Create a JButton
@@ -112,7 +111,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 		submitButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(!answers[0] && !answers[0])
+				if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
 				{
 					//win
 					new LevelTwoScreen();
