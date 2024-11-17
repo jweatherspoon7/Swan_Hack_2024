@@ -39,6 +39,7 @@ public class App
 		}
 		
 		TitleScreen titleScreen = new TitleScreen();
+		Lose Lose = new Lose();
 		//DialogueAfterLvlOne n = new DialogueAfterLvlOne();
 		
 	}
