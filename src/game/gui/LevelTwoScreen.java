@@ -3,6 +3,9 @@ package game.gui;
 import javax.sound.sampled.*;
 
 import javax.swing.*;
+
+import game.App;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,12 +26,17 @@ public class LevelTwoScreen extends BaseLevelScreen
 	
     public LevelTwoScreen() {
     	super("Level Two Screen", 2);
+
     	
     	//goes to next level if all possible calls have been played
     	if(audioFilesPlayed >= audioFiles.length)
     	{
 
-    		return; //replace with next level
+    		if(App.pointTracker > 7) new Win();
+    		else new Lose();
+    		
+    		this.dispose();
+    		return;
     	}
     	
          // Create a JButton
@@ -105,18 +113,21 @@ public class LevelTwoScreen extends BaseLevelScreen
 		submitButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(!answers[0] && !answers[0])
+
+				if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
 				{
+					winSound();
+					//win
 					new LevelTwoScreen();
-					victory.setVisible(true);
 					LevelTwoScreen.this.dispose();
+					
 				}
 				else
 				{
-					new LevelTwoScreen();
-					lost.setVisible(true);
-					LevelTwoScreen.this.dispose();
+					wrong();
 				}
+				
+				clip.stop(); // Stop the clip if it's already playing
 			}
 		});
 		
@@ -125,22 +136,48 @@ public class LevelTwoScreen extends BaseLevelScreen
             public void actionPerformed(ActionEvent e) {
                 if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
                 {
+
+                	winSound();
+                	//win
                 	new LevelTwoScreen();
-                	victory.setVisible(true);
 					LevelTwoScreen.this.dispose();
                 }
                 else
                 {
-                	new LevelTwoScreen();
-                	lost.setVisible(true);
-					LevelTwoScreen.this.dispose();
+
+                	wrong();
                 }
+                
+                clip.stop(); // Stop the clip if it's already playing
             }
 		});
 		
 		
 		setVisible(true);
-    }}
+
+    }
+    
+    public void wrong()
+	{
+		Timer timer = new Timer(300, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				new LevelTwoScreen();
+				LevelTwoScreen.this.dispose();
+			}
+    	});
+    	timer.setInitialDelay(200);
+    	timer.setRepeats(false);
+    	
+    	
+    	timer.start();
+    	hurtGojo();
+    	--App.pointTracker;
+	}
+    
+}
+
  
     	
     	
