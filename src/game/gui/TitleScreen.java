@@ -13,8 +13,11 @@ public class TitleScreen extends JFrame {
 
         // Title label
         JLabel title = new JLabel("Scammer Slammer!", SwingConstants.CENTER);
+        JLabel smallText = new JLabel("With Satoru Gojo", SwingConstants.CENTER);
+        smallText.setFont(new Font("Verdana", Font.ITALIC, 18));
         title.setFont(new Font("Verdana", Font.BOLD, 25));
         add(title, BorderLayout.NORTH);
+        add(smallText, BorderLayout.SOUTH);
 
         // Panel for buttons
         JPanel buttonPanel = new JPanel();
