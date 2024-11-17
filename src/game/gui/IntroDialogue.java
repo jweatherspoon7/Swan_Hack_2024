@@ -19,6 +19,7 @@ public class IntroDialogue extends JFrame{
 	        "       Welcome to Scammer Slammer! I Gojo, wil teach you the basics of this game.",
 	        "       In this game, you will be presented with various possible scams",
 	        "       Determine if they are scams or not by finding what's wrong with them",
+	        "       Make sure you refer to the **List of Trusted Emails** to help make your decisions",
 	        "       Good luck, the fate of the free world counts on you!"
 	    };
 	   

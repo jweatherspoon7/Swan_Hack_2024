@@ -37,8 +37,8 @@ public class App
 			emailsArr[i] = arrL.get(i).split("[|]");
 		}
 		
-		TitleScreen titleScreen = new TitleScreen();
-		Lose Lose = new Lose();
+		//TitleScreen titleScreen = new TitleScreen();
+		Win Win = new Win();
 		//DialogueAfterLvlOne n = new DialogueAfterLvlOne();
 		
 	}
