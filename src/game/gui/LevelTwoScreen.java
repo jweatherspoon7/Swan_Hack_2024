@@ -113,6 +113,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 			public void actionPerformed(ActionEvent e) {
 				if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
 				{
+					winSound();
 					//win
 					new LevelTwoScreen();
 					LevelTwoScreen.this.dispose();
@@ -122,6 +123,8 @@ public class LevelTwoScreen extends BaseLevelScreen
 				{
 					wrong();
 				}
+				
+				clip.stop(); // Stop the clip if it's already playing
 			}
 		});
 		
@@ -130,6 +133,7 @@ public class LevelTwoScreen extends BaseLevelScreen
             public void actionPerformed(ActionEvent e) {
                 if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
                 {
+                	winSound();
                 	//win
                 	new LevelTwoScreen();
 					LevelTwoScreen.this.dispose();
@@ -138,6 +142,8 @@ public class LevelTwoScreen extends BaseLevelScreen
                 {
                 	wrong();
                 }
+                
+                clip.stop(); // Stop the clip if it's already playing
             }
 		});
 		
@@ -163,6 +169,7 @@ public class LevelTwoScreen extends BaseLevelScreen
     	hurtGojo();
     	--App.pointTracker;
 	}
+    
 }
  
     	
