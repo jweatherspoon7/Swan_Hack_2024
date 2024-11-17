@@ -17,7 +17,7 @@ public class LevelOneScreen extends BaseLevelScreen
 	{
 		super("Level One", 1);
 		
-		if(levelCounter >= 3) 
+		if(levelCounter >= App.emailsArr.length) 
 		{
 			new DialogueAfterLvlOne();
 			LevelOneScreen.this.dispose();
@@ -76,7 +76,6 @@ public class LevelOneScreen extends BaseLevelScreen
 				{
 					new LevelOneScreen();
 					LevelOneScreen.this.dispose();
-					victory.setVisible(true);
 				}
 				else
 				{
@@ -96,7 +95,6 @@ public class LevelOneScreen extends BaseLevelScreen
                 {
                 	new LevelOneScreen();
 					LevelOneScreen.this.dispose();
-                	victory.setVisible(true);
                 }
             }
 		});
@@ -121,5 +119,6 @@ public class LevelOneScreen extends BaseLevelScreen
     	
     	timer.start();
     	hurtGojo();
+    	--App.pointTracker;
 	}
 }

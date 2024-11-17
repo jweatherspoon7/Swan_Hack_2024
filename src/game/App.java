@@ -13,6 +13,7 @@ public class App
 {
 	public static Scanner scr;
 	public static String[][] emailsArr;
+	public static int pointTracker = 15;
 
 	public static void main(String[] args) 
 	{
