@@ -46,8 +46,8 @@ public class CreditScreen extends JFrame {
         	}
         });
 
-        c.gridx = 3;
-		 c.gridy = 0;
+        c.gridx = 0;
+		 c.gridy = 5;
 		 c.ipadx = 10;
 		 c.ipady = 20;
         // adding buttons in JFrame
