@@ -17,7 +17,7 @@ public class LevelOneScreen extends BaseLevelScreen
 	{
 		super("Level One", 1);
 		
-		if(levelCounter >= 3) 
+		if(levelCounter >= App.emailsArr.length) 
 		{
 			new DialogueAfterLvlOne();
 			LevelOneScreen.this.dispose();
@@ -74,9 +74,9 @@ public class LevelOneScreen extends BaseLevelScreen
 			public void actionPerformed(ActionEvent e) {
 				if(isWrongDomain.isSelected() && newProblem[3].equals("true") && newProblem[4].equals("true"))
 				{
+					winSound();
 					new LevelOneScreen();
 					LevelOneScreen.this.dispose();
-					victory.setVisible(true);
 				}
 				else
 				{
@@ -94,9 +94,9 @@ public class LevelOneScreen extends BaseLevelScreen
                 }
                 else
                 {
+                	winSound();
                 	new LevelOneScreen();
 					LevelOneScreen.this.dispose();
-                	victory.setVisible(true);
                 }
             }
 		});
@@ -121,5 +121,6 @@ public class LevelOneScreen extends BaseLevelScreen
     	
     	timer.start();
     	hurtGojo();
+    	--App.pointTracker;
 	}
 }

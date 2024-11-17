@@ -3,6 +3,9 @@ package game.gui;
 import javax.sound.sampled.*;
 
 import javax.swing.*;
+
+import game.App;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +30,11 @@ public class LevelTwoScreen extends BaseLevelScreen
     	//goes to next level if all possible calls have been played
     	if(audioFilesPlayed >= audioFiles.length)
     	{
-
-    		return; //replace with next level
+    		if(App.pointTracker > 7) new Win();
+    		else new Lose();
+    		
+    		this.dispose();
+    		return;
     	}
     	
          // Create a JButton
@@ -105,17 +111,16 @@ public class LevelTwoScreen extends BaseLevelScreen
 		submitButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(!answers[0] && !answers[0])
+				if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
 				{
+					//win
 					new LevelTwoScreen();
-					victory.setVisible(true);
 					LevelTwoScreen.this.dispose();
+					
 				}
 				else
 				{
-					new LevelTwoScreen();
-					lost.setVisible(true);
-					LevelTwoScreen.this.dispose();
+					wrong();
 				}
 			}
 		});
@@ -125,22 +130,40 @@ public class LevelTwoScreen extends BaseLevelScreen
             public void actionPerformed(ActionEvent e) {
                 if(askingForInfo.isSelected() == answers[0] && otherReasons.isSelected() == answers[1])
                 {
+                	//win
                 	new LevelTwoScreen();
-                	victory.setVisible(true);
 					LevelTwoScreen.this.dispose();
                 }
                 else
                 {
-                	new LevelTwoScreen();
-                	lost.setVisible(true);
-					LevelTwoScreen.this.dispose();
+                	wrong();
                 }
             }
 		});
 		
 		
 		setVisible(true);
-    }}
+    }
+    
+    public void wrong()
+	{
+		Timer timer = new Timer(300, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				new LevelTwoScreen();
+				LevelTwoScreen.this.dispose();
+			}
+    	});
+    	timer.setInitialDelay(200);
+    	timer.setRepeats(false);
+    	
+    	
+    	timer.start();
+    	hurtGojo();
+    	--App.pointTracker;
+	}
+}
  
     	
     	

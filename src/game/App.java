@@ -5,14 +5,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.*;
-
 import game.gui.*;
 
 public class App 
 {
 	public static Scanner scr;
 	public static String[][] emailsArr;
+	public static int pointTracker = 15;
 
 	public static void main(String[] args) 
 	{
@@ -38,8 +37,6 @@ public class App
 		}
 		
 		TitleScreen titleScreen = new TitleScreen();
-		Lose Lose = new Lose();
-		//DialogueAfterLvlOne n = new DialogueAfterLvlOne();
 		
 	}
 

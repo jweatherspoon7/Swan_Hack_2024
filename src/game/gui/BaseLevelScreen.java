@@ -54,6 +54,7 @@ public abstract class BaseLevelScreen extends JFrame
 	protected JLabel gojoPicture = new JLabel(gojo);
 	
 	protected Clip gojoHurtSound;
+	protected Clip gojoLaugh;
 	
 	public BaseLevelScreen(String title, int reasonsAmount)
 	{
@@ -76,6 +77,11 @@ public abstract class BaseLevelScreen extends JFrame
 		trustedEmailsDialog.setLayout(new GridLayout(5, -1));
 		trustedEmailsDialog.add(new JLabel("McAfee@mcafee.com"));
 		trustedEmailsDialog.add(new JLabel("boss@businessgmail.com"));
+		trustedEmailsDialog.add(new JLabel("hiring@bigcompany.com"));
+		trustedEmailsDialog.add(new JLabel("hiring@bigcompany.com"));
+		trustedEmailsDialog.add(new JLabel("deals@topshoppingstore.com"));
+		
+		//hiring@bigcompany.com deals@topshoppingstore.com
 		
 		victory.setSize(300,300);
 		victory.add(new JLabel("GJ"));
@@ -129,11 +135,15 @@ public abstract class BaseLevelScreen extends JFrame
 		});
 		
 		File sound = new File("Man screaming (Original meme)-[AudioTrimmer.com].wav");
+		File sound1 = new File("gojo_laugh.wav");
 		try {
 			AudioInputStream audioStream = AudioSystem.getAudioInputStream(sound);
+			AudioInputStream audio1 = AudioSystem.getAudioInputStream(sound1);
             gojoHurtSound = AudioSystem.getClip();
+            gojoLaugh = AudioSystem.getClip();
             
             gojoHurtSound.open(audioStream);
+            gojoLaugh.open(audio1);
             
 		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
 			// TODO Auto-generated catch block
@@ -164,7 +174,6 @@ public abstract class BaseLevelScreen extends JFrame
 		
 		JTextArea eMessage = new JTextArea(message);
 		eMessage.setEditable(false);
-		eMessage.setEnabled(false);
 		eMessage.setLineWrap(true);
 		
 		emailPanel.add(eMessage);
@@ -206,7 +215,12 @@ public abstract class BaseLevelScreen extends JFrame
 		 gojoHurtSound.stop(); // Stop the clip if it's already playing
 		 gojoHurtSound.setFramePosition(0); // Reset the clip to the beginning
 		 gojoHurtSound.start(); // Play the clip
-		 
-		
+	}
+	
+	protected void winSound()
+	{
+		 gojoLaugh.stop(); // Stop the clip if it's already playing
+		 gojoLaugh.setFramePosition(0); // Reset the clip to the beginning
+		 gojoLaugh.start(); // Play the clip
 	}
 }
