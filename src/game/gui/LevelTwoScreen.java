@@ -25,7 +25,7 @@ public class LevelTwoScreen extends BaseLevelScreen
 	private Clip clip;
 	
     public LevelTwoScreen() {
-    	super("Level Two Screen", 2);
+    	super("Level Two Screen", 2);  
     	
     	//goes to next level if all possible calls have been played
     	if(audioFilesPlayed >= audioFiles.length)
